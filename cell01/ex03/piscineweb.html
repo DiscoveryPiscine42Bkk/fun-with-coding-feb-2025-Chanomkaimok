@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piscine Web</title>
+    <style>
+         body {
+            display: flex;
+            flex-direction: column;                  /*จัดข้อความในแนวตั้ง*/
+            justify-content: flex-start;             /*จัดให้อยู่จากด้านบน */
+            align-items: center;                     /*จัดวางเนื้อหาตรงกลางในแนวตั้ง*/
+            height: 100vh;                           /*กำหนดความสูงของ <body> เป็น 10% ของความสูงหน้าจอ*/
+            margin: 0;                               /*ลบระยะขอบด้านนอกของ <body> บนเบราว์เซอร์บางตัวจะมีขอบประมาณ 8px ซึ่งอาจทำให้การจัดตำแหน่งผิดพลาด*/
+            font-family: Arial, sans-serif;          /*ใช้ฟอนต์ Arial,sans-serif ตามลำดับ*/
+            background-color: #f4f4f4;             /*พื้นหลัง*/
+        }
+        h1 {
+            font-size: 50px;                         
+            font-weight: bold;                       /*ทำให้ตัวอักษรของ <h1> หนาขึ้น*/
+            text-align: center;                      /*ทำให้ข้อความอยู่กึ่งกลางในแนวนอนใน <h1>*/
+        }
+        .image-container {
+            display: flex;
+            flex-direction: row;                     /* จัดรูปให้อยู่ในแนวนอน */
+            justify-content: center;                 /* จัดให้อยู่กึ่งกลาง */
+            align-items: center;                     /* จัดให้รูปอยู่กึ่งกลางแนวนอน */
+        }
+        img {
+            width: 500px;                            /* กำหนดความกว้างของรูป */
+            height: 300px;                           /* ให้ความสูงปรับตามอัตราส่วน */
+            margin: 10px;                            /* ระยะห่างระหว่างรูป */
+        }
+    </style>    
+</head>
+<body>
+    <h1>Piscine Web</h1>
+    <div class="image-container">
+        <a href="https://www.youtube.com/watch?v=INscMGmhmX4" target="_blank">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.CZwzHfuoQ5lMVf_pmopy1gHaEK&pid=Api&P=0&h=180" alt="Image 1">
+    </a>
+        <img src="https://tse2.mm.bing.net/th?id=OIP.wL1CD8C9zFNqWBec_Nr2BwHaHY&pid=Api&P=0&h=180" alt="Image 2">
+    </div>
+</body>
+</html>

@@ -10,16 +10,16 @@
             margin: 0;
         }
         table {
-            width: 100%;
+            width: 100%;                   /*กำหนดตารางเต็มหน้าจอ*/
             height: 100vh;                 /* ให้ตารางสูงเต็มหน้าจอ */
-            border-collapse: collapse;
-            table-layout: fixed;           /* ควบคุมการจัดขนาดคอลัมน์ */
+            border-collapse: collapse;     /*กำหนดให้ขอบแต่ละเซลล์ใน <table> รวมกันเป็นเส้นเดียวกัน*/
+            table-layout: fixed;           /*กำหนด column ให้เท่า<td> หรือ <th> */
         }
         th, td {
-            border: 1px solid black;
-            padding: 20px;                 /* ลด padding เพื่อให้ไม่กินพื้นที่มาก */
-            text-align: center;
-            font-size: 2rem;               /* เพิ่มขนาดตัวอักษรเพื่อความชัดเจน */
+            border: 1px solid black;     /*กำหนดขอบให้เซลล์ <td> และ <th> เป็นสีดำ*/
+            padding: 10px;                 /*ลด padding เพื่อให้ไม่กินพื้นที่มาก */
+            text-align: left;              /*ข้อความชิดซ้ายของเซลล์*/
+            font-size: 2rem;               /*เพิ่มขนาดตัวอักษรเพื่อความชัดเจน */
         }
         td:first-child {
             background-color: #e8e843;       /* สีพื้นหลัง*/

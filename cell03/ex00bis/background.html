@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random</title>
+    <link rel="stylesheet" href="backgroound.css" /> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="bg">
+        <button class="rbtn">Click Here!!</button>
+    </div>
+</body>
+<script>
+    $(document).ready(function() {               /*func จะส่งไป doc .ready จะเช็คว่าทุกองค์ประกอบถูกโหลดครบมั้ย*/
+        $(".rbtn").click(function() {            /*jq จะเรียกคลาส rbtn เมื่อคลิกปุ่มในคล่าสนี้ จะเรียกใช้ฟังก์ชั่น*/
+            let randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);   /*# เครื่องหมายสี Mathfloor ปัดให้เป็นจำนวนเต็ม random สีที่เป็นไปได้ทั้งหมด(hexa)*/
+            $('body').css('background-color', randomColor);
+        });
+    });
+</script>
+</html>

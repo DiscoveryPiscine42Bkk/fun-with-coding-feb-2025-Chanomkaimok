@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    margin: 0;
+}
+
+.rbtn {
+    background-color: #660e3d;
+    color: rgb(255, 255, 255);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.bg {
+    position: relative;
+    display: inline-block;
+}
+
+.rbtn:hover {
+    background-color: #eaed1a;
+}
+
+.rbtn:active {
+    background-color: #dd1b1b;
+    transform: scale(0.50);
+}

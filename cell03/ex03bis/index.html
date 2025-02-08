@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="todo.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #ft_list {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .todo {
+            background: white;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            width: 200px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () { // รอให้ DOM โหลดเสร็จก่อนทำงาน
+            $("button").click(function () { // ดักจับเหตุการณ์คลิกที่ปุ่ม
+                let todoText = prompt("Enter a new task:"); // เปิดหน้าต่างให้ผู้ใช้ป้อนข้อความ
+                if (todoText) { // ตรวจสอบว่าผู้ใช้ป้อนข้อความจริง ๆ หรือไม่
+                    let newTodo = $("<div class='todo'></div>").text(todoText); // สร้าง element div พร้อมข้อความ
+                    newTodo.click(function () { // เพิ่ม event click ให้กับ div ที่สร้างใหม่
+                        if (confirm("Do you want to delete this task?")) { // ถามผู้ใช้ก่อนลบ
+                            $(this).remove(); // ลบ element เมื่อกดตกลง
+                        }
+                    });
+                    $("#ft_list").prepend(newTodo); // เพิ่ม task ใหม่ไปที่ด้านบนของรายการ
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <button>New</button>
+    <div id="ft_list"></div>
+
+</body>
+</html>
